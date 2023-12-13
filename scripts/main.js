@@ -32,9 +32,11 @@ function subir(n, g) {
         globo.style.transform = `translate(111px, ${g}px)`;
         antes.style.transform = `translateY(${g + 75}px)`;
         actual.style.transform = `translateX(${n}px)`;
-        requestAnimationFrame(() => subir(n > 115 ? n - 1 : n, g - 3));
+        requestAnimationFrame(() => subir(n > 125 ? n - 1 : n, g - 3));
     } else {
         message.classList.add('activo');
+        globo.remove();
+        antes.remove();
         animarEstrellas();
     }
 }
@@ -43,7 +45,7 @@ function agregarEstrellas() {
     const pos = [-290, 290, -350, 350, -320, 320, -230, 230];
     for (let i = 0; i < pos.length; i++) {
         $('.box').append(`
-        <div class="estrella" style="transform: translate(${pos[i]}px, ${410}px);">
+        <div class="estrella" style="transform: translate(${pos[i]}px, ${310}px);">
         <div class="centro"></div>
         <div class="aspa aspa1"></div>
         <div class="aspa aspa2"></div>
@@ -65,13 +67,14 @@ function animarEstrellas() {
     const posX = [-290, 290, -350, 350, -320, 320, -230, 230];
     const estrellas = document.querySelectorAll('.estrella');
     for (let i = 0; i < estrellas.length; i++) {
+        estrellas[i].style.visibility = 'visible';
         estrellas[i].style.transform = `translate(${posX[i]}px,${posY[i]}px)`;
     }
     setTimeout(() => {
         message.style.opacity = '0';
         setInterval(() => {
             message.innerHTML = 'Te Quiero :)';
-            message.style.opacity = '1';    
+            message.style.opacity = '1';
         }, 2000);
     }, 3000);
 }
