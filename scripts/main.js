@@ -67,6 +67,13 @@ function animarEstrellas() {
     for (let i = 0; i < estrellas.length; i++) {
         estrellas[i].style.transform = `translate(${posX[i]}px,${posY[i]}px)`;
     }
+    setTimeout(() => {
+        message.style.opacity = '0';
+        setInterval(() => {
+            message.innerHTML = 'Te Quiero :)';
+            message.style.opacity = '1';    
+        }, 2000);
+    }, 3000);
 }
 
 function abrir() {

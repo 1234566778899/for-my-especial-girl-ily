@@ -13,6 +13,7 @@
     height: 100vh;
     background-color: #080403;
 }
+
 .gift {
     padding: 10px;
     width: 600px;
@@ -22,16 +23,28 @@
 }
 
 @keyframes sacudir {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotate(0) translate(0, 0);
     }
-    10%, 30%, 50%, 70%, 90% {
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
         transform: rotate(-3deg) translate(-5px, -5px);
     }
-    20%, 40%, 60%, 80% {
+
+    20%,
+    40%,
+    60%,
+    80% {
         transform: rotate(3deg) translate(5px, 5px);
     }
 }
+
 .tapa {
     transition: transform 1s ease;
 }
@@ -50,6 +63,8 @@
     transform: translate(0px, -35px);
     padding: 0px 32px;
 }
+
+
 
 @media screen and (max-width:600px) {
     .caja {
