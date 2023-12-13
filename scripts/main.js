@@ -28,14 +28,12 @@ function alejar(n, g) {
 }
 
 function subir(n, g) {
-    if (g > -560) {
+    if (g > -600) {
         globo.style.transform = `translate(111px, ${g}px)`;
         antes.style.transform = `translateY(${g + 75}px)`;
         actual.style.transform = `translateX(${n}px)`;
-        requestAnimationFrame(() => subir(n > 115 ? n - 1 : n, g - 2));
+        requestAnimationFrame(() => subir(n > 115 ? n - 1 : n, g - 3));
     } else {
-        globo.remove();
-        antes.remove();
         message.classList.add('activo');
         animarEstrellas();
     }
