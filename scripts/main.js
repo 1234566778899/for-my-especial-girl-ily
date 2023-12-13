@@ -34,6 +34,8 @@ function subir(n, g) {
         actual.style.transform = `translateX(${n}px)`;
         requestAnimationFrame(() => subir(n > 115 ? n - 1 : n, g - 2));
     } else {
+        globo.remove();
+        antes.remove();
         message.classList.add('activo');
         animarEstrellas();
     }
