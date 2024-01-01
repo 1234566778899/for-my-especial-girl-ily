@@ -73,7 +73,7 @@ function animarEstrellas() {
     setTimeout(() => {
         message.style.opacity = '0';
         setInterval(() => {
-            message.innerHTML = 'Éxitos manito :)';
+            message.innerHTML = 'Me alegra haberte conocido <3';
             message.style.opacity = '1';
         }, 2000);
     }, 3000);
