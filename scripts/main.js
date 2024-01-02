@@ -73,7 +73,7 @@ function animarEstrellas() {
     setTimeout(() => {
         message.style.opacity = '0';
         setInterval(() => {
-            message.innerHTML = 'Te quiero mucho Jenny ❤️';
+            message.innerHTML = 'Te quiero mucho ❤️';
             message.style.opacity = '1';
         }, 2000);
     }, 3000);
